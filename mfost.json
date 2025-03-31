@@ -1,0 +1,23 @@
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mark Foster",
+    "alternateName": "Mark",
+    "url": "mfoster.io",
+    "sameAs": [
+      "https://www.facebook.com/MarkJohnson",
+      "https://www.twitter.com/MarkJ",
+      "https://www.linkedin.com/in/markjohnson"
+    ],
+    "jobTitle": "Blockchain Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Tech Innovators Inc."
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dallas",
+      "addressRegion": "Texas",
+      "addressCountry": "USA"
+    }
+  }

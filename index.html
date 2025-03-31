@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraphQL and JSON-LD Example</title>
+    <script type="application/ld+json">
+    {
+        "@context": {
+            "@vocab": "https://schema.org/",
+            "name": "schema:name",
+            "description": "schema:description",
+            "sameAs": "schema:sameAs",
+            "address": {
+                "@id": "schema:address",
+                "@context": {
+                    "locality": "schema:addressLocality",
+                    "region": "schema:addressRegion",
+                    "country": "schema:addressCountry"
+                }
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <h1>GraphQL and JSON-LD Integration</h1>
+    <p>This page demonstrates how JSON-LD and a GraphQL query can be embedded into an HTML document.</p>
+
+    <h2>GraphQL Query</h2>
+    <pre>
+        <code>
+query GetData {
+  resource(id: "example-id") {
+    name
+    description
+    sameAs {
+      url
+    }
+    address {
+      locality
+      region
+      country
+    }
+  }
+}
+        </code>
+    </pre>
+</body>
+</html>

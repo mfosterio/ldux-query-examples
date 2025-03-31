@@ -3,48 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GraphQL and JSON-LD Example</title>
+    <title>Mark Foster Profile</title>
     <script type="application/ld+json">
     {
-        "@context": {
-            "@vocab": "https://schema.org/",
-            "name": "schema:name",
-            "description": "schema:description",
-            "sameAs": "schema:sameAs",
-            "address": {
-                "@id": "schema:address",
-                "@context": {
-                    "locality": "schema:addressLocality",
-                    "region": "schema:addressRegion",
-                    "country": "schema:addressCountry"
-                }
-            }
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mark Foster",
+        "alternateName": "Mark",
+        "url": "mfoster.io",
+        "sameAs": [
+          "https://www.facebook.com/MarkJohnson",
+          "https://www.twitter.com/MarkJ",
+          "https://www.linkedin.com/in/markjohnson"
+        ],
+        "jobTitle": "Blockchain Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Tech Innovators Inc."
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dallas",
+          "addressRegion": "Texas",
+          "addressCountry": "USA"
         }
     }
     </script>
 </head>
 <body>
-    <h1>GraphQL and JSON-LD Integration</h1>
-    <p>This page demonstrates how JSON-LD and a GraphQL query can be embedded into an HTML document.</p>
+    <h1>Mark Foster's Social Profile</h1>
+    <p>This page includes JSON-LD data for Mark Foster, a Blockchain Developer.</p>
 
-    <h2>GraphQL Query</h2>
-    <pre>
-        <code>
-query GetData {
-  resource(id: "example-id") {
-    name
-    description
-    sameAs {
-      url
-    }
-    address {
-      locality
-      region
-      country
-    }
-  }
-}
-        </code>
-    </pre>
+    <h2>About Mark Foster</h2>
+    <ul>
+        <li><strong>Name:</strong> Mark Foster (Alternate Name: Mark)</li>
+        <li><strong>Website:</strong> <a href="https://mfoster.io" target="_blank">mfoster.io</a></li>
+        <li><strong>Social Profiles:</strong>
+            <ul>
+                <li><a href="https://www.facebook.com/MarkJohnson" target="_blank">Facebook</a></li>
+                <li><a href="https://www.twitter.com/MarkJ" target="_blank">Twitter</a></li>
+                <li><a href="https://www.linkedin.com/in/markjohnson" target="_blank">LinkedIn</a></li>
+            </ul>
+        </li>
+        <li><strong>Job Title:</strong> Blockchain Developer at Tech Innovators Inc.</li>
+        <li><strong>Location:</strong> Dallas, Texas, USA</li>
+    </ul>
 </body>
 </html>
